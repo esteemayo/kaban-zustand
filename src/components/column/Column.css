@@ -70,3 +70,10 @@
   outline-color: var(--clr-gray-light);
   caret-color: var(--clr-gray);
 }
+
+.modal-content button {
+  all: unset;
+  display: inline-block;
+  background-color: var(--clr-gray-light);
+  color: var(--clr-gray);
+}
