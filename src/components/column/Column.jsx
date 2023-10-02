@@ -14,6 +14,7 @@ const Column = ({ status }) => {
 
   const addTask = useStore((state) => state.addTask);
 
+  const [text, setText] = useState('');
   const [open, setOpen] = useState(false);
 
   const handleClick = useCallback((status) => {
