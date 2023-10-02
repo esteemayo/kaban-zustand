@@ -14,8 +14,8 @@ const Column = ({ status }) => {
   return (
     <div className='column'>
       <div className='title-wrapper'>
-        <button>Add</button>
         <p>{status}</p>
+        <button>Add</button>
       </div>
       {tasks.map((item) => {
         const { title } = item
