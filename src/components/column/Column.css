@@ -13,3 +13,9 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.title-wrapper button {
+  all: unset;
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+}
