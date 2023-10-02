@@ -89,3 +89,7 @@
 .modal-content button:hover {
   opacity: 0.95;
 }
+
+.modal-content button:disabled {
+  opacity: 0.5;
+}
