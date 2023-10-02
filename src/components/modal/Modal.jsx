@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 import './Modal.css';
 
-const Modal = ({ isOpen, onClose, children }) => {
+const Modal = ({ isOpen, onClose, body }) => {
   const [showModal, setShowModal] = useState(isOpen);
 
   const handleClose = useCallback(() => {
@@ -30,7 +30,7 @@ const Modal = ({ isOpen, onClose, children }) => {
     <div className='modal' onClick={closeModalHandler}>
       <div className={showModal ? 'modal-wrapper active' : 'modal-wrapper'}>
         <div className='modal-content'>
-          {children}
+          {body}
         </div>
       </div>
     </div>
