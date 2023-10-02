@@ -8,7 +8,7 @@ const Task = ({ title }) => {
       <div>{title}</div>
       <div className='bottom-wrapper'>
         <div></div>
-        <div className='status'>{STATUS}</div>
+        <div className={`status ${STATUS}`}>{STATUS}</div>
       </div>
     </div>
   );
