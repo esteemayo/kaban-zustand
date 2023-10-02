@@ -63,6 +63,12 @@
   transition: all 300ms;
 }
 
+.modal-wrapper .active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 300ms;
+}
+
 .modal-content input {
   display: inline-block;
   font-family: inherit;
