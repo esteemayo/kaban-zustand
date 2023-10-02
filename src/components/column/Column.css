@@ -16,6 +16,7 @@
 
 .title-wrapper button {
   all: unset;
+  height: fit-content;
   padding: 0.5rem;
   background-color: var(--clr-white);
   color: var(--clr-black);
