@@ -21,7 +21,7 @@ const Column = ({ status }) => {
   const handleClick = useCallback(() => {
     const newTask = {
       id: uuidV4(),
-      text,
+      title: text,
       status,
     };
 
