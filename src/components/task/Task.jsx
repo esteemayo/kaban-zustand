@@ -6,7 +6,7 @@ const Task = ({ title }) => {
   return (
     <div className='task'>
       <div>{title}</div>
-      <div>
+      <div className='bottom-wrapper'>
         <div></div>
         <div className='status'>{STATUS}</div>
       </div>
