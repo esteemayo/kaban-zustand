@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import { shallow } from 'zustand/shallow';
 
 import Task from '../task/Task';
@@ -11,11 +12,17 @@ const Column = ({ status }) => {
     shallow
   );
 
+  const addTask = useStore((state) => state.addTask);
+
+  const handleClick = useCallback((status) => {
+    addTask(`Task ${status}`, status);
+  }, [addTask]);
+
   return (
     <div className='column'>
       <div className='title-wrapper'>
         <p>{status}</p>
-        <button>Add</button>
+        <button onClick={() => handleClick(status)}>Add</button>
       </div>
       {tasks.map((item) => {
         const { title } = item
