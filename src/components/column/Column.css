@@ -16,6 +16,8 @@
 
 .title-wrapper button {
   all: unset;
+  padding: 0.5rem;
   background-color: var(--clr-white);
   color: var(--clr-black);
+  border-radius: 4px;
 }
