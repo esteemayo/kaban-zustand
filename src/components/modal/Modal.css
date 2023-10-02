@@ -25,12 +25,12 @@
 }
 
 .modal-wrapper {
-  transform: translateY(-100%);
+  transform: translateY(100%);
   opacity: 0;
   transition: all 300ms;
 }
 
-.modal-wrapper .active {
+.modal-wrapper.active {
   transform: translateY(0);
   opacity: 1;
   transition: all 300ms;
