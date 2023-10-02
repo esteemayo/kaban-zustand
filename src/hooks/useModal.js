@@ -1,6 +1,5 @@
 import { create } from 'zustand';
 
-
 const store = (set) => ({
   isOpen: false,
   onOpen: () => set({ isOpen: true }),
