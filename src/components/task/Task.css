@@ -22,3 +22,14 @@
   background-color: var(--clr-gray-light);
   border-radius: 4px;
 }
+
+.PLANNED {
+}
+
+.ONGOIMG {
+  background-color: var(--clr-ongoing);
+}
+
+.DONE {
+  background-color: var(--clr-done);
+}
