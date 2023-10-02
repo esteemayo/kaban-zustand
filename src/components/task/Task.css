@@ -4,6 +4,7 @@
   background-color: var(--clr-white);
   color: var(--clr-black);
   border-radius: 4px;
+  margin-bottom: 3px;
 
   display: flex;
   flex-direction: column;
