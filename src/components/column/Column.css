@@ -56,3 +56,9 @@
   align-items: center;
   justify-content: center;
 }
+
+.modal-content input {
+  display: inline-block;
+  width: 100%;
+  height: 3rem;
+}
