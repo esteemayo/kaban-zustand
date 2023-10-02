@@ -15,3 +15,10 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.status {
+  font-size: small;
+  padding: 0.25rem;
+  background-color: var(--clr-gray-light);
+  border-radius: 4px;
+}
