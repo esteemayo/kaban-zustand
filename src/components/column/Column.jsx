@@ -41,7 +41,7 @@ const Column = ({ status }) => {
         return <Task key={id} title={title} />
       })}
       <div className='modal'>
-        <div className='modal-wrapper'>
+        <div className='modal-wrapper active'>
           <div className='modal-content'>
             <input
               type='text'
