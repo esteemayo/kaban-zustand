@@ -41,14 +41,16 @@ const Column = ({ status }) => {
         return <Task key={id} title={title} />
       })}
       <div className='modal'>
-        <div className='modal-content'>
-          <input
-            type='text'
-            value={text}
-            placeholder='Title'
-            onChange={(e) => setText(e.target.value)}
-          />
-          <button onClick={handleClick}>Submit</button>
+        <div className='modal-wrapper'>
+          <div className='modal-content'>
+            <input
+              type='text'
+              value={text}
+              placeholder='Title'
+              onChange={(e) => setText(e.target.value)}
+            />
+            <button onClick={handleClick}>Submit</button>
+          </div>
         </div>
       </div>
     </div>
