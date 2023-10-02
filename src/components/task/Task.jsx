@@ -1,14 +1,18 @@
+import { useStore } from '../../store';
+
 import './Task.css';
 
-const STATUS = 'PLANNED';
-
 const Task = ({ title }) => {
+  const task = useStore((state) =>
+    state.tasks.find((item) => item.title === title)
+  );
+
   return (
     <div className='task'>
-      <div>{title}</div>
+      <div>{task.title}</div>
       <div className='bottom-wrapper'>
         <div></div>
-        <div className={`status ${STATUS}`}>{STATUS}</div>
+        <div className={`status ${task.status}`}>{task.status}</div>
       </div>
     </div>
   );
