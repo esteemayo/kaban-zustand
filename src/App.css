@@ -1,4 +1,7 @@
 .app {
-  background-color: var(--clr-gray);
   min-height: 100vw;
+  background-color: var(--clr-gray);
+  display: flex;
+  align-items: start;
+  justify-content: center;
 }
