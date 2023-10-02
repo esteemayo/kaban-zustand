@@ -1,0 +1,5 @@
+.task {
+  min-height: 5rem;
+  background-color: var(--clr-white);
+  border-radius: 4px;
+}
