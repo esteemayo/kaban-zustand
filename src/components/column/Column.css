@@ -1,4 +1,7 @@
 .column {
+  width: 33%;
+  max-width: 25rem;
   min-height: 25rem;
   background-color: var(--clr-gray-dark);
+  margin: 0 1rem;
 }
