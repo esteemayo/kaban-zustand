@@ -14,7 +14,7 @@ const Task = ({ title }) => {
     <div className='task'>
       <div>{task.title}</div>
       <div className='bottom-wrapper'>
-        <div>
+        <div className='delete-icon'>
           <FaTrash onClick={() => deleteTask(task.id)} />
         </div>
         <div className={`status ${task.status}`}>{task.status}</div>

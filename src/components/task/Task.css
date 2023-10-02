@@ -17,6 +17,12 @@
   justify-content: space-between;
 }
 
+.delete-icon svg {
+  font-size: 1.25rem;
+  color: var(--clr-gray);
+  cursor: pointer;
+}
+
 .status {
   font-size: small;
   padding: 0.25rem;
