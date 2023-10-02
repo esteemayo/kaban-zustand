@@ -6,4 +6,4 @@ const store = (set) => ({
   onClose: () => set({ isOpen: false }),
 });
 
-export const useModal = create(store);
+export const useTaskModal = create(store);
