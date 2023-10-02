@@ -61,4 +61,8 @@
   display: inline-block;
   width: 100%;
   height: 3rem;
+  background-color: transparent;
+  color: #999;
+  border: 1px solid var(--clr-gray);
+  border-radius: 2px;
 }
