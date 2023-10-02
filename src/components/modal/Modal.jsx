@@ -27,7 +27,7 @@ const Modal = ({ isOpen, onClose, children }) => {
   }
 
   return (
-    <div className='modal'>
+    <div className='modal' onClick={closeModalHandler}>
       <div className={showModal ? 'modal-wrapper active' : 'modal-wrapper'}>
         <div className='modal-content'>
           {children}
