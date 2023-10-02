@@ -1,5 +1,7 @@
+import Modal from './components/modal/Modal';
+import Column from './components/column/Column';
+
 import './App.css'
-import Column from './components/column/Column'
 
 function App() {
   return (
@@ -7,6 +9,7 @@ function App() {
       <Column status='PLANNED' />
       <Column status='ONGOING' />
       <Column status='DONE' />
+      <Modal />
     </div>
   )
 }
