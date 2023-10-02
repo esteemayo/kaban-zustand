@@ -11,6 +11,9 @@ const store = (set) => ({
   addTask: (payload) => set((state) => ({
     tasks: [...state.tasks, payload]
   })),
+  deleteTask: (payload) => set((state) => ({
+    tasks: state.tasks.filter((item) => item.id !== payload)
+  })),
 });
 
 export const useTask = create(store);
