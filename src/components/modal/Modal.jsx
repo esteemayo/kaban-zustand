@@ -12,6 +12,12 @@ const Modal = ({ isOpen, onClose, children }) => {
     }, 300);
   }, [onClose]);
 
+  const closeModalHandler = useCallback((e) => {
+    if (e.target.classList.contains('modal')) {
+      handleClose();
+    }
+  }, [handleClose]);
+
   useEffect(() => {
     setShowModal(isOpen)
   }, [isOpen]);
