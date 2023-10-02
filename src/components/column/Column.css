@@ -39,3 +39,10 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+.modal-content {
+  padding: 1rem;
+  background-color: var(--clr-white);
+  position: absolute;
+  z-index: 1000;
+}
