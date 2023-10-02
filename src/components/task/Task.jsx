@@ -1,9 +1,9 @@
-import { useStore } from '../../store';
+import { useTask } from '../../hooks/useTask';
 
 import './Task.css';
 
 const Task = ({ title }) => {
-  const task = useStore((state) =>
+  const task = useTask((state) =>
     state.tasks.find((item) => item.title === title)
   );
 
