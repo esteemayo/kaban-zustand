@@ -1,0 +1,4 @@
+.app {
+  background-color: var(--clr-gray);
+  min-height: 100vw;
+}
