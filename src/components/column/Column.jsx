@@ -3,17 +3,17 @@ import { v4 as uuidV4 } from 'uuid';
 import { useCallback, useState } from 'react';
 
 import Task from '../task/Task';
-import { useStore } from '../../store';
+import { useTask } from '../../hooks/useTask';
 
 import './Column.css';
 
 const Column = ({ status }) => {
-  const tasks = useStore((state) =>
+  const tasks = useTask((state) =>
     state.tasks.filter((item) => item.status === status),
     shallow
   );
 
-  const addTask = useStore((state) => state.addTask);
+  const addTask = useTask((state) => state.addTask);
 
   const [text, setText] = useState('');
   const [open, setOpen] = useState(false);
