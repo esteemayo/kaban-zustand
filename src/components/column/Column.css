@@ -83,4 +83,9 @@
   border-bottom-right-radius: 2px;
   outline-color: var(--clr-gray-light);
   cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-content button:hover {
+  opacity: 0.95;
 }
