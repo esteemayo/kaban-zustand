@@ -81,4 +81,6 @@
   color: var(--clr-gray);
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
+  outline-color: var(--clr-gray-light);
+  cursor: pointer;
 }
