@@ -1,4 +1,5 @@
 import { shallow } from 'zustand/shallow';
+import { v4 as uuidV4 } from 'uuid';
 import { useCallback, useState } from 'react';
 
 import Task from '../task/Task';
@@ -18,7 +19,13 @@ const Column = ({ status }) => {
   const [open, setOpen] = useState(false);
 
   const handleClick = useCallback(() => {
-    addTask(text, status);
+    const newTask = {
+      id: uuidV4(),
+      text,
+      status,
+    };
+
+    addTask(newTask);
     setText('');
     setOpen(false);
   }, [addTask, status, text]);
@@ -30,8 +37,8 @@ const Column = ({ status }) => {
         <button onClick={() => setOpen(true)}>Add</button>
       </div>
       {tasks.map((item) => {
-        const { title } = item
-        return <Task key={title} title={title} />
+        const { id, title } = item
+        return <Task key={id} title={title} />
       })}
       <div className='modal'>
         <div className='modal-content'>
