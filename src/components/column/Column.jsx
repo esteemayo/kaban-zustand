@@ -42,7 +42,12 @@ const Column = ({ status }) => {
       })}
       <div className='modal'>
         <div className='modal-content'>
-          <input type='text' value={text} onChange={(e) => setText(e.target.value)} />
+          <input
+            type='text'
+            value={text}
+            placeholder='Title'
+            onChange={(e) => setText(e.target.value)}
+          />
           <button onClick={handleClick}>Submit</button>
         </div>
       </div>
