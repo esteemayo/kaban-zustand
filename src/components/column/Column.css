@@ -67,4 +67,6 @@
   color: #999;
   border: 1px solid var(--clr-gray);
   border-radius: 2px;
+  outline-color: var(--clr-gray-light);
+  caret-color: var(--clr-gray);
 }
