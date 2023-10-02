@@ -31,6 +31,11 @@ const Column = ({ status }) => {
         const { title } = item
         return <Task key={title} title={title} />
       })}
+      <div className='modal'>
+        <div className='modal-content'>
+          <input type='text' value={text} onChange={(e) => setText(e.target.value)} />
+        </div>
+      </div>
     </div>
   );
 };
