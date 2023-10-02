@@ -27,5 +27,6 @@ html {
 
 body {
   font-size: var(--default-font-size);
+  color: var(--clr-white);
   line-height: 1.6;
 }
