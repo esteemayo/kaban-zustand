@@ -1,5 +1,5 @@
-import { useCallback } from 'react';
 import { shallow } from 'zustand/shallow';
+import { useCallback, useState } from 'react';
 
 import Task from '../task/Task';
 import { useStore } from '../../store';
@@ -13,6 +13,8 @@ const Column = ({ status }) => {
   );
 
   const addTask = useStore((state) => state.addTask);
+
+  const [open, setOpen] = useState(false);
 
   const handleClick = useCallback((status) => {
     addTask(`Task ${status}`, status);
