@@ -40,19 +40,21 @@ const Column = ({ status }) => {
         const { id, title } = item
         return <Task key={id} title={title} />
       })}
-      <div className='modal'>
-        <div className='modal-wrapper active'>
-          <div className='modal-content'>
-            <input
-              type='text'
-              value={text}
-              placeholder='Title'
-              onChange={(e) => setText(e.target.value)}
-            />
-            <button onClick={handleClick}>Submit</button>
+      {open && (
+        <div className='modal'>
+          <div className={open ? 'modal-wrapper active' : 'modal-wrapper'}>
+            <div className='modal-content'>
+              <input
+                type='text'
+                value={text}
+                placeholder='Title'
+                onChange={(e) => setText(e.target.value)}
+              />
+              <button onClick={handleClick}>Submit</button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
