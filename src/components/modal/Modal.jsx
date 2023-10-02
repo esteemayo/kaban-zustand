@@ -1,6 +1,10 @@
+import { useState } from 'react';
+
 import './Modal.css';
 
-const Modal = ({ children }) => {
+const Modal = ({ isOpen, onClose, children }) => {
+  const [showModal, setShowModal] = useState(isOpen);
+
   return (
     <div className='modal'>
       <div className='modal-wrapper active'>
