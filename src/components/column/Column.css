@@ -72,6 +72,11 @@
   caret-color: var(--clr-gray);
 }
 
+.modal-content input::placeholder {
+  font-size: 1.4rem;
+  color: #bbb;
+}
+
 .modal-content button {
   all: unset;
   display: inline-block;
