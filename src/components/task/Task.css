@@ -4,4 +4,8 @@
   background-color: var(--clr-white);
   color: var(--clr-black);
   border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
