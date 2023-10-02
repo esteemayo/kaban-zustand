@@ -21,4 +21,10 @@
   background-color: var(--clr-white);
   color: var(--clr-black);
   border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.title-wrapper button:hover {
+  background-color: var(--clr-gray-light);
 }
