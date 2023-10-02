@@ -41,6 +41,8 @@
 }
 
 .modal-content {
+  width: 25rem;
+  height: 5rem;
   padding: 1rem;
   background-color: var(--clr-white);
   position: absolute;
