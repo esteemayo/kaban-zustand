@@ -17,9 +17,11 @@ const Column = ({ status }) => {
   const [text, setText] = useState('');
   const [open, setOpen] = useState(false);
 
-  const handleClick = useCallback((status) => {
-    addTask(`Task ${status}`, status);
-  }, [addTask]);
+  const handleClick = useCallback(() => {
+    addTask(text, status);
+    setText('');
+    setOpen(false);
+  }, [addTask, status, text]);
 
   return (
     <div className='column'>
@@ -34,6 +36,7 @@ const Column = ({ status }) => {
       <div className='modal'>
         <div className='modal-content'>
           <input type='text' value={text} onChange={(e) => setText(e.target.value)} />
+          <button onClick={handleClick}>Submit</button>
         </div>
       </div>
     </div>
