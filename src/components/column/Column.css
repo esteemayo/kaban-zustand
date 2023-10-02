@@ -2,6 +2,7 @@
   width: 33%;
   max-width: 20rem;
   min-height: 20rem;
+  padding: 0.5rem;
   background-color: var(--clr-gray-dark);
   margin: 0 0.5rem;
   border-radius: 4px;
