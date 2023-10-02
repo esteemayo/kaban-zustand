@@ -24,7 +24,7 @@ const Column = ({ status }) => {
     <div className='column'>
       <div className='title-wrapper'>
         <p>{status}</p>
-        <button onClick={() => handleClick(status)}>Add</button>
+        <button onClick={() => setOpen(true)}>Add</button>
       </div>
       {tasks.map((item) => {
         const { title } = item
