@@ -1,6 +1,6 @@
 import { FaTrash } from 'react-icons/fa';
 
-import { useTask } from '../../hooks/useTask';
+import { useTask } from '../../store';
 import './Task.css';
 
 const Task = ({ title }) => {
