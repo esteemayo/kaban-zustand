@@ -62,18 +62,6 @@
   justify-content: center;
 }
 
-.modal-wrapper {
-  transform: translateY(100%);
-  opacity: 0;
-  transition: all 300ms;
-}
-
-.modal-wrapper.active {
-  transform: translateY(37rem);
-  opacity: 1;
-  transition: all 300ms;
-}
-
 .modal-content input {
   display: inline-block;
   font-family: inherit;
