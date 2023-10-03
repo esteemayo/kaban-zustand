@@ -33,7 +33,8 @@ const Column = ({ status }) => {
 
   const handleDrop = useCallback(() => {
     const newTask = {
-      title: draggedTask,
+      id: draggedTask.id,
+      title: draggedTask.title,
       status,
     };
 
