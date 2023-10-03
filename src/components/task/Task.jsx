@@ -1,8 +1,9 @@
+import { useCallback } from 'react';
 import { FaTrash } from 'react-icons/fa';
 
 import { useStore } from '../../store';
+
 import './Task.css';
-import { useCallback } from 'react';
 
 const Task = ({ title }) => {
   const task = useStore((state) =>
