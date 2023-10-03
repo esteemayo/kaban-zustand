@@ -6,6 +6,7 @@
   --clr-done: #ee6c4d;
   --clr-white: #fff;
   --clr-black: #000;
+  --clr-red: rgba(244, 63, 94, 1);
 
   /* fonts */
   --default-font-size: 1.6rem;
