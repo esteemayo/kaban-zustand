@@ -10,7 +10,7 @@
 }
 
 .column.drop {
-  border: 4px dashed var(--clr-white);
+  border-color: var(--clr-white);
 }
 
 .title-wrapper {
