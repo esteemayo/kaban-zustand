@@ -20,7 +20,7 @@
 
 .delete-icon svg {
   font-size: 1.25rem;
-  color: var(--clr-gray);
+  color: var(--clr-red);
   cursor: pointer;
 }
 
