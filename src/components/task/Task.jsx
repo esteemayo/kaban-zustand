@@ -9,9 +9,10 @@ const Task = ({ title }) => {
   );
 
   const deleteTask = useTask((state) => state.deleteTask);
+  const setDraggedTask = useTask((state) => state.draggedTask);
 
   return (
-    <div className='task' draggable>
+    <div className='task' draggable onDragStart={() => setDraggedTask(task.title)}>
       <div>{task.title}</div>
       <div className='bottom-wrapper'>
         <div className='delete-icon'>
