@@ -52,7 +52,7 @@ const Column = ({ status }) => {
       </div>
       {tasks.map((item) => {
         const { id, title } = item
-        return <Task key={id} title={title} />
+        return <Task key={id} title={title} />;
       })}
       <Modal
         isOpen={isOpen}
