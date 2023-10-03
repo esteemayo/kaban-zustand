@@ -2,6 +2,7 @@ import { FaTrash } from 'react-icons/fa';
 
 import { useStore } from '../../store';
 import './Task.css';
+import { useCallback } from 'react';
 
 const Task = ({ title }) => {
   const task = useStore((state) =>
@@ -10,8 +11,17 @@ const Task = ({ title }) => {
   const deleteTask = useStore((state) => state.deleteTask);
   const setDraggedTask = useStore((state) => state.setDraggedTask);
 
+  const handleDragStart = useCallback(() => {
+    const selectedTask = {
+      id: task.id,
+      title: task.title,
+    };
+
+    setDraggedTask(selectedTask);
+  }, [setDraggedTask, task]);
+
   return (
-    <div className='task' draggable onDragStart={() => setDraggedTask(task.title)}>
+    <div className='task' draggable onDragStart={handleDragStart}>
       <div>{task.title}</div>
       <div className='bottom-wrapper'>
         <div className='delete-icon'>
