@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { devtools } from 'zustand/middleware';
 
 const store = (set) => ({
   tasks: [
@@ -23,4 +24,4 @@ const store = (set) => ({
     })),
 });
 
-export const useTask = create(store);
+export const useTask = create(devtools(store));
