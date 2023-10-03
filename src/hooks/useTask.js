@@ -21,4 +21,16 @@ const store = (set) => ({
     })),
 });
 
-export const useTask = create(persist(devtools(store), { name: 'store' }));
+const log = (config) => (set, get, api) =>
+  config(
+    (...args) => {
+      console.log(args);
+      set(...args);
+    },
+    get,
+    api,
+  );
+
+export const useTask = create(
+  log(persist(devtools(store), { name: 'store' }))
+);
