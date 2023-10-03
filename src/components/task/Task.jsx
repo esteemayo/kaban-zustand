@@ -11,7 +11,7 @@ const Task = ({ title }) => {
   const deleteTask = useTask((state) => state.deleteTask);
 
   return (
-    <div className='task'>
+    <div className='task' draggable>
       <div>{task.title}</div>
       <div className='bottom-wrapper'>
         <div className='delete-icon'>
