@@ -2,12 +2,12 @@ import { useEffect } from 'react';
 import { render } from '@testing-library/react';
 import { expect, test, vi } from 'vitest';
 
-import { useTask } from './store';
+import { useStore } from './store';
 
 vi.mock('zustand');
 
 function TestComponent({ selector, effect }) {
-  const items = useTask(selector);
+  const items = useStore(selector);
 
   useEffect(() => {
     effect(items);
