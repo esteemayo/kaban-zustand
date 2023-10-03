@@ -67,7 +67,7 @@ const Column = ({ status }) => {
 
   return (
     <div
-      className='column'
+      className={drop ? 'column drop' : 'column'}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
