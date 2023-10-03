@@ -14,6 +14,7 @@ const Column = ({ status }) => {
   );
   const addTask = useTask((state) => state.addTask);
   const setDraggedTask = useTask((state) => state.setDraggedTask);
+  const moveTask = useTask((state) => state.moveTask);
   const draggedTask = useTask((state) => state.draggedTask);
 
   const [text, setText] = useState('');
@@ -24,9 +25,14 @@ const Column = ({ status }) => {
   }, []);
 
   const handleDrop = useCallback((e) => {
-    console.log(draggedTask);
+    const newTask = {
+      title: draggedTask,
+      status,
+    };
+
+    moveTask(newTask);
     setDraggedTask(null);
-  }, [draggedTask, setDraggedTask]);
+  }, [draggedTask, moveTask, setDraggedTask, status]);
 
   const handleClose = useCallback(() => {
     setTimeout(() => {
