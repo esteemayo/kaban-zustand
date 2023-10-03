@@ -21,6 +21,10 @@ const Column = ({ status }) => {
     e.preventDefault();
   }, []);
 
+  const handleDrop = useCallback((e) => {
+    console.log(e, 'drop');
+  }, []);
+
   const handleClose = useCallback(() => {
     setTimeout(() => {
       setShowModal(false);
