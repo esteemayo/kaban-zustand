@@ -19,7 +19,7 @@ const Modal = ({ isOpen, onClose, body }) => {
   }, [handleClose]);
 
   useEffect(() => {
-    setShowModal(isOpen)
+    setShowModal(isOpen);
   }, [isOpen]);
 
   if (!isOpen) {
