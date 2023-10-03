@@ -1,15 +1,15 @@
 import { FaTrash } from 'react-icons/fa';
 
-import { useTask } from '../../store';
+import { useStore } from '../../store';
 import './Task.css';
 
 const Task = ({ title }) => {
-  const task = useTask((state) =>
+  const task = useStore((state) =>
     state.tasks.find((item) => item.title === title)
   );
 
-  const deleteTask = useTask((state) => state.deleteTask);
-  const setDraggedTask = useTask((state) => state.setDraggedTask);
+  const deleteTask = useStore((state) => state.deleteTask);
+  const setDraggedTask = useStore((state) => state.setDraggedTask);
 
   return (
     <div className='task' draggable onDragStart={() => setDraggedTask(task.title)}>
