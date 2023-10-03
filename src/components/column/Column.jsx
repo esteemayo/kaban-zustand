@@ -50,7 +50,7 @@ const Column = ({ status }) => {
   }, [addTask, status, text]);
 
   return (
-    <div className='column' onDragOver={handleDragOver}>
+    <div className='column' onDragOver={handleDragOver} onDrop={handleDrop}>
       <div className='title-wrapper'>
         <p>{status}</p>
         <button onClick={() => setShowModal(true)}>Add</button>
