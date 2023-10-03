@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { devtools, persist } from 'zustand/middleware';
+import { devtools, persist, subscribeWithSelector } from 'zustand/middleware';
 import { produce } from 'immer';
 
 const store = (set) => ({
@@ -36,14 +36,15 @@ const log = (config) => (set, get, api) =>
   );
 
 export const useStore = create(
-  log(persist(devtools(store), { name: 'store' }))
+  subscribeWithSelector(log(persist(devtools(store), { name: 'store' })))
 );
 
-useStore.subscribe((newStore, prevStore) => {
-  if (newStore.tasks !== prevStore.tasks) {
+useStore.subscribe(
+  (store) => store.tasks,
+  (newTasks, prevTasks) => {
     useStore.setState({
-      tasksInOngoing: newStore.tasks.filter((item) => item.status === 'ONGOING')
+      tasksInOngoing: newTasks.filter((item) => item.status === 'ONGOING')
         .length,
     });
   }
-});
+);
