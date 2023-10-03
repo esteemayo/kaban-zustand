@@ -5,11 +5,12 @@
   padding: 0.5rem;
   background-color: var(--clr-gray-dark);
   margin: 0 0.5rem;
+  border: 4px dashed transparent;
   border-radius: 4px;
 }
 
 .column.drop {
-  border: 1px dashed var(--clr-white);
+  border: 4px dashed var(--clr-white);
 }
 
 .title-wrapper {
