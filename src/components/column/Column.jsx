@@ -3,19 +3,19 @@ import { v4 as uuidV4 } from 'uuid';
 import { useCallback, useState } from 'react';
 
 import Task from '../task/Task';
-import { useTask } from '../../store';
+import { useStore } from '../../store';
 
 import './Column.css';
 
 const Column = ({ status }) => {
-  const tasks = useTask((state) =>
+  const tasks = useStore((state) =>
     state.tasks.filter((item) => item.status === status),
     shallow
   );
-  const addTask = useTask((state) => state.addTask);
-  const setDraggedTask = useTask((state) => state.setDraggedTask);
-  const moveTask = useTask((state) => state.moveTask);
-  const draggedTask = useTask((state) => state.draggedTask);
+  const addTask = useStore((state) => state.addTask);
+  const setDraggedTask = useStore((state) => state.setDraggedTask);
+  const moveTask = useStore((state) => state.moveTask);
+  const draggedTask = useStore((state) => state.draggedTask);
 
   const [text, setText] = useState('');
   const [showModal, setShowModal] = useState(false);
