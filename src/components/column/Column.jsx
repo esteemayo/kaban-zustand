@@ -14,6 +14,7 @@ const Column = ({ status }) => {
   );
   const addTask = useTask((state) => state.addTask);
   const setDraggedTask = useTask((state) => state.setDraggedTask);
+  const draggedTask = useTask((state) => state.draggedTask);
 
   const [text, setText] = useState('');
   const [showModal, setShowModal] = useState(false);
@@ -23,9 +24,9 @@ const Column = ({ status }) => {
   }, []);
 
   const handleDrop = useCallback((e) => {
+    console.log(draggedTask);
     setDraggedTask(null);
-    console.log(e, 'drop');
-  }, [setDraggedTask]);
+  }, [draggedTask, setDraggedTask]);
 
   const handleClose = useCallback(() => {
     setTimeout(() => {
