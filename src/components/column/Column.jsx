@@ -39,6 +39,7 @@ const Column = ({ status }) => {
 
     moveTask(newTask);
     setDraggedTask(null);
+    setDrop(false);
   }, [draggedTask, moveTask, setDraggedTask, status]);
 
   const handleClose = useCallback(() => {
