@@ -51,7 +51,7 @@ const Column = ({ status }) => {
         <button onClick={() => onOpen()}>Add</button>
       </div>
       {tasks.map((item) => {
-        const { id, title } = item
+        const { id, title } = item;
         return <Task key={id} title={title} />;
       })}
       <Modal
