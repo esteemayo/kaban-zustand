@@ -60,9 +60,11 @@ const Column = ({ status }) => {
       status,
     };
 
-    addTask(newTask);
-    setText('');
-    setShowModal(false);
+    if (text.trim() !== '') {
+      addTask(newTask);
+      setText('');
+      setShowModal(false);
+    }
   }, [addTask, status, text]);
 
   return (
