@@ -38,3 +38,12 @@ const log = (config) => (set, get, api) =>
 export const useStore = create(
   log(persist(devtools(store), { name: 'store' }))
 );
+
+useStore.subscribe((newStore, prevStore) => {
+  if (newStore.tasks !== prevStore.tasks) {
+    useStore.setState({
+      tasksInOngoing: newStore.tasks.filter((item) => item.status === 'ONGOING')
+        .length,
+    });
+  }
+});
