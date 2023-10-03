@@ -22,7 +22,10 @@ const store = (set) => ({
   moveTask: (payload) =>
     set((state) => ({
       tasks: state.tasks.map((item) =>
-        item.title === payload.title ? { id: payload.id, title: payload.title, status: payload.status } : item),
+        item.title === payload.title ?
+          { id: payload.id, title: payload.title, status: payload.status } :
+          item
+      ),
     })),
 });
 
