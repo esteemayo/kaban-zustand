@@ -21,6 +21,10 @@ const Column = ({ status }) => {
   const [showModal, setShowModal] = useState(false);
   const [drop, setDrop] = useState(false);
 
+  const handleOpen = useCallback(() => {
+    setShowModal(true);
+  }, []);
+
   const handleDragOver = useCallback((e) => {
     e.preventDefault();
     setDrop(true);
