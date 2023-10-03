@@ -84,16 +84,14 @@ const Column = ({ status }) => {
       })}
       {showModal && (
         <div className='modal' onClick={closeModalHandler}>
-          <div className={showModal ? 'modal-wrapper active' : 'modal-wrapper'}>
-            <div className='modal-content'>
-              <input
-                type='text'
-                value={text}
-                placeholder='Title'
-                onChange={(e) => setText(e.target.value)}
-              />
-              <button onClick={handleClick}>Submit</button>
-            </div>
+          <div className='modal-content'>
+            <input
+              type='text'
+              value={text}
+              placeholder='Title'
+              onChange={(e) => setText(e.target.value)}
+            />
+            <button onClick={handleClick}>Submit</button>
           </div>
         </div>
       )}
