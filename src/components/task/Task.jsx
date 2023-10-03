@@ -7,7 +7,6 @@ const Task = ({ title }) => {
   const task = useStore((state) =>
     state.tasks.find((item) => item.title === title)
   );
-
   const deleteTask = useStore((state) => state.deleteTask);
   const setDraggedTask = useStore((state) => state.setDraggedTask);
 
