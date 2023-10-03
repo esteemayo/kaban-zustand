@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { devtools, persist, subscribeWithSelector } from 'zustand/middleware';
 import { produce } from 'immer';
+import { useEffect, useRef } from 'react';
 
 const store = (set) => ({
   tasks: [],
@@ -48,3 +49,16 @@ useStore.subscribe(
     });
   }
 );
+
+function RefTest() {
+  const ref = useRef();
+
+  useEffect(() => {
+    useStore.subscribe(
+      (store) => store.tasks,
+      (tasks) => {
+        ref.current = tasks;
+      }
+    );
+  }, []);
+}
