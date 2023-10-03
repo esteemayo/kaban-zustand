@@ -74,7 +74,7 @@ const Column = ({ status }) => {
     >
       <div className='title-wrapper'>
         <p>{status}</p>
-        <button onClick={() => setShowModal(true)}>Add</button>
+        <button onClick={handleOpen}>Add</button>
       </div>
       {tasks.map((item) => {
         const { id, title } = item;
