@@ -35,6 +35,6 @@ const log = (config) => (set, get, api) =>
     api,
   );
 
-export const useTask = create(
+export const useStore = create(
   log(persist(devtools(store), { name: 'store' }))
 );
