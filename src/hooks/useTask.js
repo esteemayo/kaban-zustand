@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { devtools } from 'zustand/middleware';
+import { devtools, persist } from 'zustand/middleware';
 
 const store = (set) => ({
   tasks: [
@@ -10,9 +10,12 @@ const store = (set) => ({
     },
   ],
   draggedTask: null,
-  addTask: (payload) => set((state) => ({
-    tasks: [...state.tasks, payload]
-  })),
+  addTask: (payload) =>
+    set(
+      (state) => ({ tasks: [...state.tasks, payload] }),
+      false,
+      'addTask',
+    ),
   deleteTask: (payload) => set((state) => ({
     tasks: state.tasks.filter((item) => item.id !== payload)
   })),
@@ -24,4 +27,4 @@ const store = (set) => ({
     })),
 });
 
-export const useTask = create(devtools(store));
+export const useTask = create(persist(devtools(store)));
