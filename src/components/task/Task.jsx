@@ -9,7 +9,7 @@ const Task = ({ title }) => {
   );
 
   const deleteTask = useTask((state) => state.deleteTask);
-  const setDraggedTask = useTask((state) => state.draggedTask);
+  const setDraggedTask = useTask((state) => state.setDraggedTask);
 
   return (
     <div className='task' draggable onDragStart={() => setDraggedTask(task.title)}>
