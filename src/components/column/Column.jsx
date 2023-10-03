@@ -3,7 +3,7 @@ import { v4 as uuidV4 } from 'uuid';
 import { useCallback, useState } from 'react';
 
 import Task from '../task/Task';
-import { useTask } from '../../hooks/useTask';
+import { useTask } from '../../store';
 
 import './Column.css';
 
