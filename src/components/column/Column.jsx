@@ -23,6 +23,12 @@ const Column = ({ status }) => {
 
   const handleDragOver = useCallback((e) => {
     e.preventDefault();
+    setDrop(true);
+  }, []);
+
+  const handleDragLeave = useCallback((e) => {
+    e.preventDefault();
+    setDrop(false);
   }, []);
 
   const handleDrop = useCallback((e) => {
