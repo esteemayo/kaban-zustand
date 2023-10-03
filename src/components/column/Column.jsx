@@ -17,6 +17,10 @@ const Column = ({ status }) => {
   const [text, setText] = useState('');
   const [showModal, setShowModal] = useState(false);
 
+  const handleDragOver = useCallback((e) => {
+    e.preventDefault();
+  }, []);
+
   const handleClose = useCallback(() => {
     setTimeout(() => {
       setShowModal(false);
