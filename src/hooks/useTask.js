@@ -27,4 +27,4 @@ const store = (set) => ({
     })),
 });
 
-export const useTask = create(persist(devtools(store)));
+export const useTask = create(persist(devtools(store), { name: 'store' }));
