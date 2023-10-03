@@ -8,12 +8,14 @@ const store = (set) => ({
       status: 'PLANNED',
     },
   ],
+  draggedTask: null,
   addTask: (payload) => set((state) => ({
     tasks: [...state.tasks, payload]
   })),
   deleteTask: (payload) => set((state) => ({
     tasks: state.tasks.filter((item) => item.id !== payload)
   })),
+  setDraggedTask: (payload) => set({ draggedTask: payload }),
 });
 
 export const useTask = create(store);
