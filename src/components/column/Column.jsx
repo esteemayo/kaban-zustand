@@ -43,17 +43,11 @@ const Column = ({ status }) => {
     setDrop(false);
   }, [draggedTask, moveTask, setDraggedTask, status]);
 
-  const handleClose = useCallback(() => {
-    setTimeout(() => {
-      setShowModal(false);
-    }, 300);
-  }, []);
-
   const closeModalHandler = useCallback((e) => {
     if (e.target.classList.contains('modal')) {
-      handleClose();
+      setShowModal(false);
     }
-  }, [handleClose]);
+  }, []);
 
   const handleClick = useCallback(() => {
     const newTask = {
