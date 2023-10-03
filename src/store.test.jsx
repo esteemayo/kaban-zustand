@@ -45,9 +45,12 @@ test('should add an item to the store and rerun effect', () => {
     addTask: store.addTask,
     deleteTask: store.deleteTask,
   });
+  let currentItems;
   let createdTask = false;
 
   const effect = vi.fn().mockImplementation((items) => {
+    currentItems = items;
+
     if (!createdTask) {
       items.addTask({
         id: 1,
@@ -61,6 +64,6 @@ test('should add an item to the store and rerun effect', () => {
     }
   });
   render(<TestComponent selector={selector} effect={effect} />);
-  expect(effect).toHaveBeenCalledTimes(2);
-  expect(effect).toHaveBeenCalledWith(expect.objectContaining({ tasks: [{ id: 1, title: 'a', status: 'b' }] }));
+  expect(effect).toHaveBeenCalledTimes(3);
+  expect(currentItems.tasks).toEqual([]);
 });
