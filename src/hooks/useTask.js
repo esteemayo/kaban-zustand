@@ -2,13 +2,7 @@ import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 
 const store = (set) => ({
-  tasks: [
-    {
-      id: 1,
-      title: 'Test Task',
-      status: 'PLANNED',
-    },
-  ],
+  tasks: [],
   draggedTask: null,
   addTask: (payload) =>
     set(
