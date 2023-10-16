@@ -23,7 +23,7 @@ const store = (set) => ({
     set((state) => ({
       tasks: state.tasks.map((item) =>
         item.title === payload.title ?
-          { id: payload.id, title: payload.title, status: payload.status } :
+          { ...payload, id: payload.id, title: payload.title, status: payload.status } :
           item
       ),
     })),
